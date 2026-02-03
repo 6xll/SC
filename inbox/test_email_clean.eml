@@ -1,0 +1,26 @@
+From: sender@example.com
+To: recipient@example.com
+Subject: Document with Attachment
+Date: Mon, 3 Feb 2026 10:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY123"
+
+--BOUNDARY123
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+Please find the attached document.
+
+Best regards,
+Sender
+
+--BOUNDARY123
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="document.txt"
+Content-Transfer-Encoding: base64
+
+VGhpcyBpcyBhIHNhbXBsZSBjbGVhbiBkb2N1bWVudC4KSXQgY29udGFpbnMgbm8gbWFsd2FyZS4K
+VGhpcyBpcyBqdXN0IGEgdGVzdCBmaWxlLgo=
+
+--BOUNDARY123--
