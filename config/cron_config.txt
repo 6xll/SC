@@ -1,0 +1,37 @@
+# Cron Job Configuration for Email Security Scanner
+# 
+# This file contains the cron job configuration to automatically run
+# the email security scanner at regular intervals.
+#
+# Installation:
+# 1. Edit this file and adjust the schedule and paths as needed
+# 2. Install: crontab -e
+# 3. Add the line(s) below (uncommented) to your crontab
+# 4. Save and exit
+#
+# Verify installation: crontab -l
+#
+# Cron format: * * * * * command
+# - Minute (0-59)
+# - Hour (0-23)
+# - Day of month (1-31)
+# - Month (1-12)
+# - Day of week (0-7, 0 and 7 are Sunday)
+
+# Run every 5 minutes
+# */5 * * * * /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
+
+# Run every 15 minutes
+# */15 * * * * /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
+
+# Run every hour at minute 0
+# 0 * * * * /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
+
+# Run every day at 2:00 AM
+# 0 2 * * * /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
+
+# Run every Monday at 9:00 AM
+# 0 9 * * 1 /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
+
+# Recommended: Run every 10 minutes during business hours (9 AM - 6 PM, Monday-Friday)
+# */10 9-18 * * 1-5 /home/runner/work/SC/SC/scripts/process_emails.sh >> /home/runner/work/SC/SC/logs/cron.log 2>&1
